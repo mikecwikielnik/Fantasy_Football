@@ -6,7 +6,7 @@ import random
 import pprint
 
 sampleList = ['mike', 'elwell', 'brown',
-              'oc', 's longo', 'hermanson']
+              'oc', 'sam', 'hermanson']
 randomList = random.choices(
   sampleList, weights=(12.125, 10.75, 10, 3, 10, 6.25), k=10)
   
@@ -19,4 +19,4 @@ import numpy as np
 
 numpyList = np.random.choice(sampleList, size=6, replace=False, p=(0.16, 0.16, 0.16, 0.16, 0.16, 0.20))
 
-print(numpyList)
+print(numpyList.reshape(-1, 1))
